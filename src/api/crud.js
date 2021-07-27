@@ -1,10 +1,7 @@
 import axios from "axios";
 
 export const crud = axios.create({
-    baseURL: 'http://localhost:3004',
-    headers: {
-        'Content-type': 'application/json; charset=UTF-8',
-    },
+    baseURL: 'http://localhost:3004'
 })
 
 crud.interceptors.response.use(function (response) {

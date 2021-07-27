@@ -2,13 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import TodosProvider from './contexts/todosContext';
+import NumberProvider from './contexts/numberContext';
 
 ReactDOM.render(
   <React.StrictMode>
-    <TodosProvider>
+    <NumberProvider>
       <App />
-    </TodosProvider>
+    </NumberProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

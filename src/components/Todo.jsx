@@ -30,25 +30,3 @@ export default function Todo({ todo }) {
     </div>
   );
 }
-
-
-
-export async function deleteTodo(id) {
-  async function deleteTodo() {
-    const [deleteTodo, deleteTodoError] = await updateTodo(todo.id, { done: true});
-    if (todo.done === true) {
-        dispatchTodos({type: 'UPDATE', payload: deleteTodo})
-    } else{
-        alert('delete todo error!')
-    }
-  }
-  return (
-    <div className={`todo ${done}`}>
-      {!todo.done && (
-        <button className="tododel__btn" onClick={deleteTodo}>
-          Delete!
-        </button>
-      )}
-    </div>
-  )
-}

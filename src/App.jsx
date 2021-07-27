@@ -1,18 +1,20 @@
 import "./App.css";
-import useTodos from './hooks/useTodos';
-import TodoList from './components/TodoList';
+import NumButton from './components/NumButton';
+import useNumber from './hooks/useNumber';
+
 
 
 function App() {
+  const [num, setNum] = useNumber()
+
   return (
     <>
-      <h1>My todo list</h1>
-      <div className="container">
-        <TodoList></TodoList>
+      <div className="App">
+        {num}
       </div>
+      <NumButton></NumButton>
     </> 
   );
 }
-
 
 export default App;
